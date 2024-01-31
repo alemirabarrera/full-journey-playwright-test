@@ -4,7 +4,7 @@ import { getLoginToken } from "../api-calls/getLoginToken";
 import { userDetails } from "../data/userDetails";
 
 
-test.only('My account using cokie injection and mocking network request', async({ page }) =>{
+test('My account using cokie injection and mocking network request', async({ page }) =>{
     const {username, password} =userDetails;
     let loginToken = await getLoginToken(username, password);    
     await page.route("**/api/user**", async (route, request)=>{
@@ -16,8 +16,7 @@ test.only('My account using cokie injection and mocking network request', async(
     });
 
     const myAccount = new MyAccountPage(page);
-    await myAccount.visit();
-    await page.pause();
+    await myAccount.visit();    
     await page.evaluate((tokenInsideBrowserCode)=>{        
         document.cookie = "token="+tokenInsideBrowserCode;
     }, loginToken)

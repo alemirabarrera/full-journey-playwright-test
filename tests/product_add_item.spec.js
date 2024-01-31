@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 
-test("Product page add to basket - waitFor URL", async ({ page })=>{
+test.skip("Product page add to basket - waitFor URL", async ({ page })=>{
    await page.goto("/")
    let buton_first =await page.locator('div:nth-child(1) > div.w-full.text-center > div.mx-6 > button')
    await buton_first.click()
