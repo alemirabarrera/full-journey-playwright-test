@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { ProductPage } from  "../page-objets/ProductsPage.js"
 import { NavegationPage } from "../page-objets/NavegationPage.js";
 import { Checkout } from "../page-objets/Checkout.js"; 
-import { LoginPage } from "../page-objets/loginPage.js";
+import { LoginPage } from "../page-objets/LoginPage.js";
 import { RegisterPage } from "../page-objets/RegisterPage.js";
 import { DeliveryDetails } from "../page-objets/DeliveryDetails.js";
 import { delivaryDetails as delivaryDetailsData} from "../data/delivaryDetails";
