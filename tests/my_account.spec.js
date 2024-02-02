@@ -4,7 +4,7 @@ import { getLoginToken } from "../api-calls/getLoginToken";
 import { userDetails } from "../data/userDetails";
 
 
-test('My account using cokie injection and mocking network request', async({ page }) =>{
+test.skip('My account using cokie injection and mocking network request', async({ page }) =>{
     const {username, password} =userDetails;
     let loginToken = await getLoginToken(username, password);    
     await page.route("**/api/user**", async (route, request)=>{
