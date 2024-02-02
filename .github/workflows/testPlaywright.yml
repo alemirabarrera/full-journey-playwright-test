@@ -15,7 +15,7 @@ jobs:
       - name: Run Tests
         run: |
           echo "Start the aplication"
-          ./shopping-store-windows-386.exe &
+          chmod +x ./shopping-store-windows-386.exe &
           echo "Install dependencies from lockfile - npm ci (still the same versions) equals to npm install(updated the new versions)"
           npm ci
           echo "Run playwright tests"
